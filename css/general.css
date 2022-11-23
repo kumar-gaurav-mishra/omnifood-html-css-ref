@@ -35,10 +35,11 @@
 
     - Grays:
     #6f6f6f , #555 , #333 , #888 , 
+
 --- 05 SHADOWS
-
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 --- 06 BORDER-RADIUS
-
+9px , 11px, 50%
 --- 07 WHITESPACE
     - Spacing system(px)
     2 / 4/ 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -97,6 +98,10 @@ strong {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
   align-items: center;
 }
@@ -140,6 +145,7 @@ strong {
   margin-bottom: 3.2rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -158,6 +164,9 @@ strong {
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--full:link,
@@ -172,7 +181,20 @@ strong {
   color: #fff;
 }
 
-.link:link,
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover,
+.btn--form:active {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn .link:link,
 .link:visited {
   display: inline-block;
   color: #e67e22;
@@ -223,6 +245,11 @@ strong {
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /* HELPER/SETTINGS CLASSES */
